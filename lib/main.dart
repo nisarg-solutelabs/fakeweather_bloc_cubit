@@ -1,4 +1,4 @@
-import 'package:bloc_cubit_demo/cubit/weather_cubit.dart';
+import 'package:bloc_cubit_demo/bloc/weather_bloc.dart';
 import 'package:bloc_cubit_demo/data/weather_repository.dart';
 import 'package:bloc_cubit_demo/pages/weather_search_page.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark(),
       title: 'Material App',
       home: BlocProvider(
-        create: (context) => WeatherCubit(FakeWeatherRepository()),
+        create: (context) => WeatherBloc(FakeWeatherRepository()),
         child: WeatherSearchPage(),
       ),
     );

@@ -1,4 +1,4 @@
-part of 'weather_cubit.dart';
+part of 'weather_bloc.dart';
 
 @immutable
 abstract class WeatherState {
@@ -9,7 +9,9 @@ class WeatherInitial extends WeatherState {
   const WeatherInitial();
 }
 
-class WeatherLoading extends WeatherState {}
+class WeatherLoading extends WeatherState {
+  const WeatherLoading();
+}
 
 class WeatherLoaded extends WeatherState {
   final Weather weather;
